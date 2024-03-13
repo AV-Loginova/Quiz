@@ -1,4 +1,4 @@
-import * as Icon from "react-bootstrap-icons";
+// import * as Icon from "react-bootstrap-icons";
 import NavBar from "./components/NavBar/NavBar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
