@@ -7,7 +7,7 @@ import QuizPage from "./components/QuizPage/QuizPage";
 
 function App() {
   return (
-    <section className="relative w-[100vw] h-[100vh] overflow-hidden font-['Poppins'] tracking-[-1px]">
+    <section className="relative w-[100vw] min-h-[100vh] overflow-hidden font-['Poppins'] tracking-[-1px]">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

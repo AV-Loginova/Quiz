@@ -1,11 +1,12 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-type props = {
+type Props = {
   text: string;
-  onclick: any;
+  onclick: (e: React.SyntheticEvent) => void;
   correct: string;
   isDisabled: boolean;
-  nextClicked: boolean;
+  isClicked: boolean;
+  setIsClicked: (value: boolean) => void;
 };
 
 function AnswerButton({
@@ -13,29 +14,34 @@ function AnswerButton({
   onclick,
   correct,
   isDisabled,
-  nextClicked,
-}: props) {
-  const [backChange, setBackChange] = useState("");
+  isClicked,
+  setIsClicked,
+}: Props) {
+  const [buttonStyle, setButtonStyle] = useState<string>(
+    "bg-[#ffdd5f] hover:bg-[#ffe484] text-black"
+  );
 
-  function handleClick(e: React.SyntheticEvent) {
+  useEffect(() => {
+    if (isClicked) {
+      setButtonStyle("bg-[#ffdd5f] hover:bg-[#ffe484] text-black");
+      setIsClicked(false);
+    }
+  }, [isClicked]);
+
+  const handleClick = (e: React.SyntheticEvent) => {
     onclick(e);
-    console.log("Next clicked:", nextClicked);
-
-    if (nextClicked === true) {
-      setBackChange("bg-[#ffdd5f] hover:bg-[#ffe484] text-black");
-    }
     if (text === correct) {
-      setBackChange("bg-[#4eb24e] hover:bg-[#4eb24e] text-white");
+      setButtonStyle("bg-[#4eb24e] hover:bg-[#4eb24e] text-white");
     } else {
-      setBackChange("bg-[#f7583e] hover:bg-[#f7583e] text-white");
+      setButtonStyle("bg-[#f7583e] hover:bg-[#f7583e] text-white");
     }
-  }
+  };
 
   return (
     <button
       onClick={handleClick}
       disabled={isDisabled}
-      className={`w-[100%] text-center bg-[#ffdd5f] p-3 rounded-[5px] hover:bg-[#ffe484] transition-all ${backChange}`}
+      className={`w-[100%] text-center p-3 rounded-[5px] transition-all ${buttonStyle} text-s`}
     >
       {text}
     </button>
