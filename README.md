@@ -12,10 +12,19 @@ This is a simple quiz application built using React. It fetches questions from a
 - Offers the option to restart the quiz
 
 ## Installation
-1) Clone the repository
+1) Clone the repository  
+```
+git clone https://github.com/AV-Loginova/Quiz.git
+```
 2) Navigate to the project directory
 3) Install dependencies
+```
+npm i
+```
 4) Run the application
+```
+npm run preview
+```
 
 ## Usage
 Simply run the application and start answering the quiz questions. Once you finish, you'll see your score and have the option to restart the quiz.
