@@ -1,6 +1,6 @@
 # Quiz Application
 
-This is a simple quiz application built using React. It fetches questions from an external API, presents them to the user, allows them to select answers, and provides feedback on their performance. 
+This is a simple quiz application built using React. It fetches questions from an external API, presents them to the user, allows them to select answers, and provides feedback on their performance.  
 ![Запись экрана 2024-03-13 в 17 39 53](https://github.com/AV-Loginova/Quiz/assets/129111624/a42e0a68-1b3b-46f4-8b5c-0e26bdd17c82)
 
 ## Features
