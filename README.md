@@ -17,9 +17,9 @@ This is a simple quiz application built using React. It fetches questions from a
 git clone https://github.com/AV-Loginova/Quiz.git
 ```
 2) Navigate to the project directory
-   ```
-   cd Quiz
-   ```
+```
+cd Quiz
+```
 3) Install dependencies
 ```
 npm i
