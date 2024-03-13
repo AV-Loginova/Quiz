@@ -33,4 +33,4 @@ npm run preview
 Simply run the application and start answering the quiz questions. Once you finish, you'll see your score and have the option to restart the quiz.
 
 ## Acknowledgments
-Special thanks to the creators of the external API used for fetching quiz questions, and to the React community for providing valuable resources and support for building interactive web applications.
+Special thanks to the creators of the [Trivia API](https://the-trivia-api.com/) used for fetching quiz questions, and to the React community for providing valuable resources and support for building interactive web applications.
